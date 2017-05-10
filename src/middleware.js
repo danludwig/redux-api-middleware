@@ -138,7 +138,7 @@ function apiMiddleware({ getState }) {
       // Make the API call
       var res = await fetch(endpoint, {
         ...options,
-        method, body, credentials, headers
+        method, body, credentials, headers: headers || {}
       });
     } catch(e) {
       // The request was malformed, or there was a network error
